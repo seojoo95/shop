@@ -17,7 +17,7 @@ export function renderProducts(data) {
           </div>
           <div class="productInfoWrap">
               <p class="name">${item.title}</p>
-              <p class="price">$"${item.price.toLocaleString()}"</p>
+              <p class="price">$${item.price.toLocaleString()}</p>
           </div>
         </a>
     </li>`,

@@ -60,7 +60,7 @@ function productsFilterHandle(data) {
     }
 
     if (value === "new") {
-      result = baseData.filter((item) => item.category.includes("new"));
+      result = baseData.filter((item) => item.tag === "new");
     }
 
     productsContainer.innerHTML = renderItem(result, productsList);
