@@ -1,20 +1,251 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Open Fashion</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/lib/tenorSans.css" />
+    <link rel="stylesheet" href="./css/lib/bodonimoda.css" />
+    <link rel="stylesheet" href="./css/lib/swiper-bundle.min.css" />
+    <script src="./js/lib/swiper-bundle.min.js"></script>
+  </head>
+  <body>
     <div class="wrap">
-        <header class="header">
-            <h1 class="logo"></h1>
-            <div class="menuContainer">
-                <nav class="menuWrap"></nav>
+      <header class="headerContainer"></header>
+      <main id="main">
+        <figure class="mainVisual">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="visualWrap swiper-slide">
+                <img src="./images/main/main_visual1_web.jpg" alt="webVisual" />
+                <div class="textWrap">
+                  <div class="mainTit">
+                    <p>Luxury</p>
+                    <p>Fashion</p>
+                    <p><span>&</span>Accessories</p>
+                  </div>
+                  <button class="collectionBtn">Explore Collection</button>
+                </div>
+              </div>
+              <!-- swiper-wrapper END -->
+              <div class="visualWrap swiper-slide">
+                <img src="./images/main/main_visual2_web.jpg" alt="webVisual" />
+                <div class="textWrap">
+                  <div class="mainTit">
+                    <p>Luxury</p>
+                    <p>Fashion</p>
+                    <p><span>&</span>Accessories</p>
+                  </div>
+                  <button class="collectionBtn">Explore Collection</button>
+                </div>
+              </div>
+              <!-- swiper-wrapper END -->
+              <div class="visualWrap swiper-slide">
+                <img src="./images/main/main_visual3_web.jpg" alt="webVisual" />
+                <div class="textWrap light">
+                  <div class="mainTit">
+                    <p>Luxury</p>
+                    <p>Fashion</p>
+                    <p><span>&</span>Accessories</p>
+                  </div>
+                  <button class="collectionBtn">Explore Collection</button>
+                </div>
+              </div>
+              <!-- swiper-wrapper END -->
             </div>
-        </header>
-        <main></main>
-        <footer class="footer"></footer>
+            <div class="swiper-pagination"></div>
+          </div>
+        </figure>
+        <section class="section new">
+          <h3 class="sectionTit tit">
+            New Arrival
+            <span class="titIcon">
+              <img src="./images/icons/titUnder.svg" alt="tit under icon" />
+            </span>
+          </h3>
+          <div class="productContainer">
+            <ul class="tabMenuWrap">
+              <li class="tabMenu on" data-id="all">
+                <button class="tabMenuBtn">all</button>
+              </li>
+              <li class="tabMenu" data-id="outer">
+                <button class="tabMenuBtn">outer</button>
+              </li>
+              <li class="tabMenu" data-id="tshirt">
+                <button class="tabMenuBtn">tshirt</button>
+              </li>
+              <li class="tabMenu" data-id="bag">
+                <button class="tabMenuBtn">bag</button>
+              </li>
+              <li class="tabMenu" data-id="acc">
+                <button class="tabMenuBtn">acc</button>
+              </li>
+            </ul>
+            <div class="swiper">
+              <ul class="productWrap inital swiper-wrapper"></ul>
+            </div>
+            <a href="#" class="moreBtn"> Explore More </a>
+          </div>
+        </section>
+        <!-- section new END -->
+        <div class="brandContainer">
+          <span class="titIcon">
+            <img src="./images/icons/titUnder.svg" alt="tit under icon" />
+          </span>
+          <ul class="brandWrap">
+            <li><img src="./images/logo/prada.svg" alt="prada" /></li>
+            <li><img src="./images/logo/burberry.svg" alt="burberry" /></li>
+            <li><img src="./images/logo/boss.svg" alt="boss" /></li>
+            <li><img src="./images/logo/catier.svg" alt="catier" /></li>
+            <li><img src="./images/logo/gucci.svg" alt="gucci" /></li>
+            <li><img src="./images/logo/tiffanyCo.svg" alt="tiffanyCo" /></li>
+          </ul>
+          <span class="titIcon">
+            <img src="./images/icons/titUnder.svg" alt="tit under icon" />
+          </span>
+        </div>
+        <!-- brandContainer END -->
+        <section class="section collection">
+          <h3 class="sectionTit tit">Collections</h3>
+          <div class="imgWrap">
+            <div class="imgCont">
+              <img src="./images/main/main3.jpg" alt="may collection" />
+            </div>
+            <div class="imgCont">
+              <img src="./images/main/main11.jpg" alt="summer collection" />
+            </div>
+            <div class="imgCont videoCont">
+              <video src="./images/main/collection.mp4" muted></video>
+              <button class="playBtn show">
+                <img src="./images/icons/play.svg" alt="playBtn" />
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- section collection END -->
+        <section class="section foryou">
+          <h3 class="sectionTit tit">
+            Just for You
+            <span class="titIcon">
+              <img src="./images/icons/titUnder.svg" alt="tit under icon" />
+            </span>
+          </h3>
+          <div class="swiper">
+            <ul class="productWrap swiper-wrapper"></ul>
+          </div>
+        </section>
+        <!-- section foryou END -->
+        <section class="section trending">
+          <h3 class="sectionTit tit">@Trending</h3>
+          <ul class="trendWrap">
+            <li class="trendCont">#2026</li>
+            <li class="trendCont">#summer</li>
+            <li class="trendCont">#collection</li>
+            <li class="trendCont">#fashion</li>
+            <li class="trendCont">#dress</li>
+            <li class="trendCont">#summercollection</li>
+            <li class="trendCont">#openfashion</li>
+          </ul>
+        </section>
+        <!-- section trending END -->
+        <section class="section explan">
+          <h3 class="logo">
+            <img src="./images/logo/logo.svg" alt="openfashion" />
+          </h3>
+          <div class="subTit2">
+            Making a luxurious lifestyle accessible for a generous group of
+            women is our daily drive.
+            <span class="titIcon">
+              <img src="./images/icons/titUnder.svg" alt="tit under icon" />
+            </span>
+          </div>
+          <ul class="explanWrap">
+            <li class="explanCont">
+              <img src="./images/icons/sticker1.svg" alt="sticker1" />
+              <p>Fast shipping. Free on orders over $25.</p>
+            </li>
+            <li class="explanCont">
+              <img src="./images/icons/sticker2.svg" alt="sticker2" />
+              <p>Sustainable process from start to finish.</p>
+            </li>
+            <li class="explanCont">
+              <img src="./images/icons/sticker3.svg" alt="sticker3" />
+              <p>Unique designs and high-quality materials.</p>
+            </li>
+            <li class="explanCont">
+              <img src="./images/icons/sticker4.svg" alt="sticker4" />
+              <p>Fast shipping. Free on orders over $25.</p>
+            </li>
+          </ul>
+          <span class="sectionSticker">
+            <img src="./images/icons/sticker5.svg" alt="sticker5" />
+          </span>
+        </section>
+        <section class="section people">
+          <h3 class="sectionTit tit">Follow Us</h3>
+          <span class="sectionSticker">
+            <img src="./images/icons/instagram_white.svg" alt="instagram" />
+          </span>
+          <ul class="peopleWrap">
+            <li class="peopleCont">
+              <a href="javascript:;">
+                <img src="./images/main/people1.png" alt="mia" />
+                <p class="snsLink">@mia</p>
+              </a>
+            </li>
+            <li class="peopleCont">
+              <a href="javascript:;">
+                <img src="./images/main/people2.png" alt="jihyn" />
+                <p class="snsLink">@ella</p>
+              </a>
+            </li>
+            <li class="peopleCont">
+              <a href="javascript:;">
+                <img src="./images/main/people3.png" alt="joo" />
+                <p class="snsLink">@jane</p>
+              </a>
+            </li>
+            <li class="peopleCont">
+              <a href="javascript:;">
+                <img src="./images/main/people4.png" alt="seo" />
+                <p class="snsLink">@maria</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <!-- section explan END -->
+      </main>
+      <footer id="footer"></footer>
     </div>
-</body>
+    <!-- swiper -->
+    <script type="module" src="./js/include.js"></script>
+    <script type="module" src="./js/data/renderData.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/cart.js"></script>
+    <script>
+      const mainVisualSwiper = new Swiper(".mainVisual .swiper", {
+        direction: "horizontal",
+        slidesPerView: 1,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
+      const foryouSwiper = new Swiper(".section.foryou .swiper", {
+        direction: "horizontal",
+        slidesPerView: 2.2,
+        spaceBetween: 10,
+        freeMode: true,
+        breakpoints: {
+          768: {
+            slidesPerView: "auto",
+          },
+        },
+      });
+    </script>
+  </body>
 </html>

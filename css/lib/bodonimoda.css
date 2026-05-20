@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "bodoni";
+  font-weight: bold;
+  src:
+    local("BodoniModa_18pt-BoldItalic"),
+    url("../../fonts/BodoniModa_18pt-BoldItalic.ttf") format("truetype");
+}

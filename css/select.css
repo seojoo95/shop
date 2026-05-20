@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+/* 셀렉트 커스텀 */
+.productFilterHead .choices__inner {
+  min-width: 85px;
+  min-height: auto;
+  height: 36px;
+  line-height: 34px;
+  background: #f9f9f9;
+  border: none;
+  border-radius: 50px;
+}
+.productFilterHead .choices__input {
+  margin: 0;
+  padding: 0;
+}
+.choices[data-type*="select-one"] .choices__inner,
+.choices[data-type*="select-one"] .choices__input {
+  padding: 0;
+}
+.productFilterHead .choices__list--single {
+  padding: 0;
+  padding-left: 15px;
+  text-transform: capitalize;
+}
+.productFilterHead .choices[data-type*="select-one"]::after {
+  right: 15px;
+  border-color: var(--gray3) transparent transparent transparent;
+}
+.choices[data-type*="select-one"].is-open::after {
+  border-color: transparent transparent var(--gray3) transparent;
+}
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  top: calc(100% + 3px);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  width: 80px;
+  border-radius: 10px;
+}
+.is-open .choices__list--dropdown,
+.is-open .choices__list[aria-expanded] {
+  border-color: #bfbfbf;
+  color: var(--gray3);
+}
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  color: var(--gray3);
+  text-transform: capitalize;
+}
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list--dropdown .choices__item--selectable.is-selected,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-selected {
+  color: var(--gray2);
+}

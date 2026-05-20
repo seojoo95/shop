@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+.blogWrap {
+  margin-bottom: 80px;
+}
+.blogCont {
+  margin-bottom: 28px;
+}
+.blogCont:last-of-type {
+  margin-bottom: 0;
+}
+.blogCont .imgWrap {
+  position: relative;
+  width: 100%;
+}
+.blogCont .imgWrap:after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    to bottom,
+    transparent 70%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  pointer-events: none;
+}
+.blogCont .imgWrap > img {
+  width: 100%;
+}
+.blogCont .imgCont {
+  position: relative;
+}
+.blogCont .blogTit {
+  position: absolute;
+  bottom: 20px;
+  z-index: 10;
+  padding: 0 15px;
+  color: var(--white3);
+  letter-spacing: 2px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  text-align: left;
+}
+.blogCont .infoCont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.blogTag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: capitalize;
+  color: var(--gray3);
+  opacity: 0.6;
+}
+.blogTag > p {
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.blogWrap.list .blogCont > a {
+  display: flex;
+  align-items: center;
+}
+.blogWrap.list .blogCont .imgWrap {
+  width: 150px;
+}
+.blogWrap.list .blogCont .infoCont {
+  display: block;
+  width: calc(100% - 150px);
+  margin: 0;
+  margin-left: 12px;
+  text-align: left;
+}
+.blogWrap.list .blogTit {
+  position: static;
+  padding: 0;
+  margin-bottom: 12px;
+  color: var(--black);
+}
+.blogWrap.list .blogSub {
+  margin-bottom: 12px;
+  font-size: var(--fsS);
+  line-height: 1.8;
+  color: var(--gray3);
+}
+.blogWrap.list .date {
+  font-style: var(--fsS);
+  color: var(--gray3);
+}
+
+/* 블로그 내용 페이지 */
+.blogArticle {
+  padding: 0 16px;
+}
+.blogArticle:first-of-type {
+  padding: 0;
+}
+.blogArticle:last-of-type {
+  padding-bottom: 50px;
+}
+.blogArticle .imgWrap > img {
+  width: 100%;
+}
+.blogArticle .textWrap {
+  padding: 20px 0 26px;
+}
+.blogArticle:first-of-type .textWrap {
+  padding: 20px 16px 26px;
+}
+.blogArticle .textWrap .blogTit {
+  margin-bottom: 10px;
+}
+.blogArticle .textWrap p {
+  line-height: 1.8;
+  color: var(--gray1);
+}
+.blogArticle .blogContSwiper {
+  padding-bottom: 20px;
+}
+.blogArticle .blogContSwiper .swiper-slide {
+  aspect-ratio: 79/104;
+}
+.blogArticle .blogContSwiper .swiper-slide > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#main .blogContSwiper .swiper-pagination {
+  bottom: 0;
+}
+#main .blogContSwiper .swiper-pagination-bullet {
+  border-color: var(--gray3);
+}
+#main .blogContSwiper .swiper-pagination-bullet-active {
+  background: var(--gray3);
+}
+.blogContInfo {
+  display: flex;
+  align-items: center;
+  color: var(--gray2);
+  margin-bottom: 12px;
+}
+.blogContInfo .postInfo {
+  display: flex;
+  align-items: center;
+}
+.blogContInfo .postInfo:after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 15px;
+  margin: 0 8px;
+  background: var(--gray2);
+}
+.blogDetailContainer .errorText {
+  height: calc(100vh - 447px);
+  padding-top: 150px;
+  text-align: center;
+  color: var(--orange2);
+}
+
+/* 반응형 - tablet */
+@media screen and (min-width: 768px) {
+  .blogWrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .blogCont {
+    width: calc(50% - 10px);
+  }
+  .blogWrap.list {
+    display: block;
+  }
+  .blogWrap.list .blogCont {
+    width: 100%;
+  }
+  .blogCont .infoCont {
+    padding: 0 10px;
+  }
+  .blogArticle {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* 반응형 - web */
+@media screen and (min-width: 1023px) {
+  #main .section.blog {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .listBtn.gallery {
+    margin-right: 150px;
+  }
+  .blogWrap.list {
+    padding: 0 150px;
+  }
+}

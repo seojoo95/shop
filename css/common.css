@@ -1,0 +1,541 @@
+@charset "utf-8";
+
+/* 공통 요소 */
+:root {
+  --black: #000000;
+  --gray1: #333333;
+  --gray2: #555555;
+  --gray3: #888888;
+  --gray4: #727272;
+  --beige1: #e0cfba;
+  --beige2: #d9dbe9;
+  --white1: #f8f0e7;
+  --white2: #d9dbe9;
+  --white3: #fcfcfc;
+  --orange1: #a8715a;
+  --orange2: #dd8560;
+
+  --tit: clamp(20px, 3vw, 24px);
+  --subTit1: clamp(18px, 3vw, 20px);
+  --subTit2: clamp(16px, 3vw, 18px);
+  --lhTit: 40px;
+  --lhSubTit1: 24px;
+  --lhSubTit2: 20px;
+
+  --fsL: clamp(16px, 3vw, 20px);
+  --fsM: clamp(14px, 3vw, 18px);
+  --fsS: clamp(12px, 3vw, 14px);
+
+  --lh: 24px;
+  --lhS: 18px;
+}
+.tit {
+  font-size: var(--tit);
+  color: var(--black);
+  line-height: var(--lhTit);
+}
+.subTit1 {
+  font-size: var(--subTit1);
+  color: var(--black);
+  line-height: var(--lhSubTit1);
+}
+.subTit2 {
+  font-size: var(--subTit2);
+  color: var(--black);
+  line-height: var(--lhSubTit2);
+}
+
+.blackBtn {
+}
+.whiteBtn {
+}
+.listBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  margin-left: auto;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #f9f9f9;
+}
+
+/* pagination */
+#main .swiper-pagination {
+  bottom: 15px;
+}
+#main .swiper-pagination-bullet {
+  width: 5px;
+  height: 5px;
+  border-radius: 0;
+  transform: rotate(45deg);
+  border: 1px solid var(--white3);
+  background: none;
+  margin: 0 7px;
+  opacity: 1;
+}
+#main .swiper-pagination-bullet-active {
+  background: var(--white3);
+}
+
+/* header */
+.headerContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  background: #e7eaef;
+  z-index: 999;
+}
+.headerContainer.white {
+  background: #fff;
+}
+.headerWrap {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+.headerWrap .logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-55%);
+}
+.headerWrap .headerOption {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.headerWrap .menuBtn span {
+  display: block;
+  width: 25px;
+  height: 1.5px;
+  background: var(--gray2);
+  margin-bottom: 5px;
+  border-radius: 10px;
+  transition: 300ms;
+}
+.headerWrap .menuBtn span:nth-of-type(2) {
+  width: 18px;
+}
+.headerWrap .menuBtn.active span:first-of-type {
+  transform: rotate(45deg) translateY(5px) translateX(1px);
+}
+.headerWrap .menuBtn.active span:nth-of-type(2) {
+  display: none;
+}
+.headerWrap .menuBtn.active span:last-of-type {
+  transform: rotate(-45deg) translateY(-4px) translateX(0);
+}
+/* main 공통 */
+.sectionTit,
+.sectionMainTit {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.sectionTit {
+  text-align: center;
+}
+.sectionMainTit {
+  padding-top: 40px;
+}
+.titIcon {
+  display: block;
+  width: 35%;
+  max-width: 180px;
+  margin: 0 auto;
+}
+.titIcon > img {
+  width: 100%;
+}
+.productCont {
+  position: relative;
+  max-width: 240px;
+}
+.productCont .imgWrap {
+  position: relative;
+  width: 100%;
+  height: 240px;
+}
+.productCont .imgWrap > img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.productCont .addCartBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  padding: 10px;
+  /* background: red; */
+}
+.productCont .productInfoWrap {
+  margin-top: 10px;
+}
+.productInfoWrap .brand {
+  font-size: var(--fsS);
+  margin-bottom: 6px;
+  color: var(--black);
+}
+.productInfoWrap .name {
+  font-size: var(--fsS);
+  line-height: 1.1;
+}
+.productInfoWrap .price {
+  margin-top: 6px;
+  font-size: var(--fsL);
+  color: var(--orange2);
+}
+/* tab menu */
+.tabMenuWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+  padding: 28px 0 38px 0;
+}
+.tabMenuWrap .tabMenu {
+  position: relative;
+}
+.tabMenuWrap .tabMenu > button {
+  font-size: var(--fsS);
+  text-transform: capitalize;
+  color: var(--gray3);
+  transition: 300ms;
+}
+.tabMenuWrap .tabMenu:hover > button {
+  color: var(--black);
+}
+.tabMenuWrap .tabMenu.on > button {
+  color: var(--black);
+}
+.tabMenuWrap .tabMenu.on:after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: 50%;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background: var(--orange2);
+  transform: rotate(45deg) translateX(-50%);
+}
+/* sns */
+.snsWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.snsCont {
+  width: 30px;
+  height: 30px;
+}
+.snsCont > a {
+  width: 100%;
+  height: 100%;
+}
+.snsCont > a > img {
+  height: 100%;
+}
+
+/* underline */
+.underLine {
+  display: block;
+  padding: 30px 0;
+}
+.underLine > img {
+  margin: 0 auto;
+}
+
+/* main menu */
+body.noScroll {
+  overflow-y: hidden;
+}
+.menuContainer {
+  display: none;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--white3);
+  z-index: 99;
+}
+.menuContainer.show {
+  display: block;
+}
+.menuContainer .dim.show {
+  display: block;
+}
+.menuContainer .tabMenuWrap {
+  justify-content: space-around;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+}
+.menuContainer .tabMenuWrap .tabMenu {
+  padding-bottom: 18px;
+  width: 100%;
+}
+.menuContainer .tabMenuWrap .tabMenu > button {
+  margin: 0 auto;
+}
+.menuContainer .tabMenuWrap .tabMenu.on:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 1px;
+  background: var(--orange2);
+}
+.menuContainer .tabMenuWrap .tabMenu.on:after {
+  bottom: -6px;
+}
+.menuContainer .menuContWrap {
+  padding: 18px 16px;
+}
+.menuContainer .menuWrap {
+  border-bottom: 1px solid #ddd;
+}
+.menuContainer .menuCont,
+.menuContainer .menuCont .subMenuOpenBtn {
+  width: 100%;
+  font-size: var(--fsS);
+  text-transform: capitalize;
+  line-height: 1;
+  cursor: pointer;
+}
+.menuContainer .menuCont.hasSub {
+  padding: 20px 0;
+}
+.menuContainer .menuCont > a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+}
+.menuContainer .menuCont:hover {
+  text-decoration: underline;
+}
+.menuContainer .menuCont.hasSub:hover {
+  text-decoration: none;
+}
+.menuContainer .menuCont .subMenuOpenBtn {
+  position: relative;
+  text-align: left;
+}
+.menuContainer .menuCont .subMenuOpenBtn:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 15px;
+  height: 15px;
+  transition: 300ms;
+  background: url("../images/icons/down.png") no-repeat center / contain;
+}
+.menuContainer .menuCont.hasSub.active .subMenuOpenBtn:after {
+  transform: rotate(-180deg);
+}
+.menuContainer .menuCont .subMenuWrap {
+  display: none;
+  padding-left: 16px;
+  transition: 300ms;
+}
+.menuContainer .menuCont .subMenuWrap.show {
+  display: block;
+}
+.menuContainer .menuCont .subMenuCont {
+  width: 100%;
+}
+.menuContainer .menuCont .subMenuCont:first-of-type {
+  margin-top: 12px;
+}
+.menuContainer .menuCont .subMenuCont:hover {
+  text-decoration: underline;
+}
+.menuContainer .menuCont .subMenuCont > a {
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+}
+.menuContainer .contatcCont {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.menuContainer .contatcCont {
+  font-size: var(--fsS);
+}
+.menuContainer .contatcCont > img {
+  height: 20px;
+}
+.menuContainer .snsCont {
+  width: 25px;
+  height: 25px;
+}
+
+/* productList */
+.productListContainer {
+  margin: 0 auto;
+  padding: 0 16px 60px;
+}
+.productFilterHead {
+  display: flex;
+  align-items: center;
+}
+.productFilterHead .totalNum {
+  margin-right: auto;
+}
+.productListContainer .productInfoWrap .price {
+  margin-top: 10px;
+}
+.productListContainer .productsContainer {
+  max-width: 450px;
+  margin: 0 auto;
+}
+.productsWrap {
+  width: 100%;
+  max-width: 495px;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 25px 15px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.productsWrap .productCont {
+  width: calc((100% - 15px) / 2);
+}
+
+/* listbtn */
+.listBtn .gallery {
+  display: none;
+}
+.listBtn.gallery .list {
+  display: none;
+}
+.listBtn.gallery .gallery {
+  display: block;
+}
+
+/* footer */
+.footerCont {
+  padding: 30px 0;
+  text-align: center;
+}
+.footerCont .addressWrap {
+  text-align: center;
+}
+.footerCont .addressWrap > * {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  padding-bottom: 16px;
+}
+.footerCont .addressWrap > a:hover {
+  text-decoration: underline;
+}
+.footerCont .footerMenuWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+}
+.footerCont .footerMenu {
+  text-transform: capitalize;
+}
+.copyright {
+  width: 100%;
+  height: 45px;
+  font-size: var(--fsS);
+  line-height: 45px;
+  text-align: center;
+  color: var(--gray2);
+  background: #eee;
+}
+/* 반응형 이미지 사이즈 */
+@media screen and (max-width: 399px) {
+  .productCont .imgWrap {
+    height: 190px;
+  }
+  .productListContainer .productsWrap .productCont .imgWrap,
+  .recommendProducts .productsWrap .productCont .imgWrap {
+    height: 210px;
+  }
+}
+@media screen and (min-width: 469px) {
+  .productCont .imgWrap {
+    height: 280px;
+  }
+}
+/* 반응형 - tablet */
+@media screen and (min-width: 659px) {
+  .productsWrap {
+    max-width: none;
+  }
+  .productListContainer .productsContainer,
+  .recommendProducts {
+    max-width: 750px;
+    margin: 0 auto;
+  }
+  .productListContainer .productsWrap .productCont,
+  .recommendProducts .productsWrap .productCont {
+    width: calc((100% - 30px) / 3);
+  }
+}
+@media screen and (min-width: 768px) {
+  .productListContainer .productsWrap .productCont .imgWrap,
+  .recommendProducts .productsWrap .productCont .imgWrap {
+    height: 310px;
+  }
+}
+/* 반응형 - web */
+@media screen and (min-width: 1023px) {
+  .menuContainer {
+    max-width: 350px;
+  }
+  .dim {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .dim.show {
+    display: block;
+  }
+  .productCont .imgWrap {
+    height: 310px;
+  }
+  .productListContainer {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
+  .productListContainer .productsContainer,
+  .recommendProducts {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .productListContainer .productsWrap .productCont,
+  .recommendProducts .productsWrap .productCont {
+    width: calc((100% - 45px) / 4);
+  }
+}

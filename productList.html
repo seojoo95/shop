@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Fashion</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/lib/choices.min.css" />
+    <link rel="stylesheet" href="./css/select.css" />
+    <link rel="stylesheet" href="./css/lib/tenorSans.css" />
+    <link rel="stylesheet" href="./css/lib/bodonimoda.css" />
+    <script src="./js/lib/jquery-4.0.0.slim.min.js"></script>
+    <script src="./js/lib/choices.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="headerContainer white"></header>
+      <main id="main">
+        <div class="productListContainer">
+          <!-- productFilterWrap END -->
+          <div class="productsContainer">
+            <div class="productFilterWrap">
+              <div class="productFilterHead">
+                <p class="totalNum"><span></span> apparel</p>
+                <div class="filterSelectWrap">
+                  <select name="filter" id="filterSelect">
+                    <option value="">all</option>
+                    <option value="new">new</option>
+                    <option value="low">low</option>
+                    <option value="high">high</option>
+                  </select>
+                </div>
+              </div>
+              <!-- productFilterHead END -->
+            </div>
+            <!-- productFilterWrap END -->
+            <ul class="productsWrap"></ul>
+          </div>
+          <!-- productsWrap END -->
+        </div>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+    <script type="module" src="./js/include.js"></script>
+    <script type="module" src="./js//data/renderData.js"></script>
+    <script type="module" src="./js/products.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/cart.js"></script>
+    <script>
+      const select = document.querySelector("#filterSelect");
+
+      const choices = new Choices(select, {
+        searchEnabled: false,
+        itemSelectText: "",
+      });
+    </script>
+  </body>
+</html>
