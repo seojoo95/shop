@@ -5,12 +5,12 @@ export const blogConts = [
     description:
       "The excitement of fall fashion is here and I’m already loving some of the trend forecasts",
     date: "10/25/2025",
-    sImg: "../images/blog/blog7.png",
-    lImg: "../images/blog/blog11.png",
+    sImg: "./images/blog/blog7.png",
+    lImg: "./images/blog/blog11.png",
     detailImg: [
-      "../images/blog/blog1.png",
-      "../images/blog/blog12.jpg",
-      "../images/blog/blog13.jpg",
+      "./images/blog/blog1.png",
+      "./images/blog/blog12.jpg",
+      "./images/blog/blog13.jpg",
     ],
     detailText1:
       "You guys know how much I love mixing high and low-end - it’s the best way to get the most bang for your buck while still elevating your wardrobe. The same goes for handbags! And honestly they are probably the best pieces to mix and match. I truly think the key to completing a look is with a great bag and I found so many this year that I wanted to share a round-up of my most worn handbags.",
@@ -24,12 +24,12 @@ export const blogConts = [
     description:
       "The excitement of fall fashion is here and I’m already loving some of the trend forecasts",
     date: "10/20/2025",
-    sImg: "../images/blog/blog2.png",
-    lImg: "../images/blog/blog8.png",
+    sImg: "./images/blog/blog2.png",
+    lImg: "./images/blog/blog8.png",
     detailImg: [
-      "../images/blog/blog1.png",
-      "../images/blog/blog12.jpg",
-      "../images/blog/blog13.jpg",
+      "./images/blog/blog1.png",
+      "./images/blog/blog12.jpg",
+      "./images/blog/blog13.jpg",
     ],
     detailText1:
       "You guys know how much I love mixing high and low-end - it’s the best way to get the most bang for your buck while still elevating your wardrobe. The same goes for handbags! And honestly they are probably the best pieces to mix and match. I truly think the key to completing a look is with a great bag and I found so many this year that I wanted to share a round-up of my most worn handbags.",
@@ -43,12 +43,12 @@ export const blogConts = [
     description:
       "The excitement of fall fashion is here and I’m already loving some of the trend forecasts",
     date: "10/10/2025",
-    sImg: "../images/blog/blog4.png",
-    lImg: "../images/blog/blog9.png",
+    sImg: "./images/blog/blog4.png",
+    lImg: "./images/blog/blog9.png",
     detailImg: [
-      "../images/blog/blog1.png",
-      "../images/blog/blog12.jpg",
-      "../images/blog/blog13.jpg",
+      "./images/blog/blog1.png",
+      "./images/blog/blog12.jpg",
+      "./images/blog/blog13.jpg",
     ],
     detailText1:
       "You guys know how much I love mixing high and low-end - it’s the best way to get the most bang for your buck while still elevating your wardrobe. The same goes for handbags! And honestly they are probably the best pieces to mix and match. I truly think the key to completing a look is with a great bag and I found so many this year that I wanted to share a round-up of my most worn handbags.",
@@ -62,12 +62,12 @@ export const blogConts = [
     description:
       "The excitement of fall fashion is here and I’m already loving some of the trend forecasts",
     date: "10/01/2025",
-    sImg: "../images/blog/blog6.png",
-    lImg: "../images/blog/blog10.png",
+    sImg: "./images/blog/blog6.png",
+    lImg: "./images/blog/blog10.png",
     detailImg: [
-      "../images/blog/blog1.png",
-      "../images/blog/blog12.jpg",
-      "../images/blog/blog13.jpg",
+      "./images/blog/blog1.png",
+      "./images/blog/blog12.jpg",
+      "./images/blog/blog13.jpg",
     ],
     detailText1:
       "You guys know how much I love mixing high and low-end - it’s the best way to get the most bang for your buck while still elevating your wardrobe. The same goes for handbags! And honestly they are probably the best pieces to mix and match. I truly think the key to completing a look is with a great bag and I found so many this year that I wanted to share a round-up of my most worn handbags.",
