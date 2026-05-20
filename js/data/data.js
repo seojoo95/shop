@@ -1,13 +1,13 @@
 export const products = [
   {
     id: 1,
-    mainImg: "../images/sum/product1.jpg",
+    mainImg: "./images/sum/product1.jpg",
     detailImg: [
-      "../images/sum/product1_detail1.jpg",
-      "../images/sum/product1_detail2.jpg",
-      "../images/sum/product1_detail3.jpg",
-      "../images/sum/product1_detail4.jpg",
-      "../images/sum/product1_detail5.jpg",
+      "./images/sum/product1_detail1.jpg",
+      "./images/sum/product1_detail2.jpg",
+      "./images/sum/product1_detail3.jpg",
+      "./images/sum/product1_detail4.jpg",
+      "./images/sum/product1_detail5.jpg",
     ],
     brand: "URBAN STUDIO",
     title: "Hooded Fur Padding",
@@ -22,13 +22,13 @@ export const products = [
   },
   {
     id: 2,
-    mainImg: "../images/sum/product2.jpg",
+    mainImg: "./images/sum/product2.jpg",
     detailImg: [
-      "../images/sum/product2_detail1.jpg",
-      "../images/sum/product2_detail2.jpg",
-      "../images/sum/product2_detail3.jpg",
-      "../images/sum/product2_detail4.jpg",
-      "../images/sum/product2_detail5.jpg",
+      "./images/sum/product2_detail1.jpg",
+      "./images/sum/product2_detail2.jpg",
+      "./images/sum/product2_detail3.jpg",
+      "./images/sum/product2_detail4.jpg",
+      "./images/sum/product2_detail5.jpg",
     ],
     brand: "URBAN STUDIO",
     title: "Hooded Padding",
@@ -42,12 +42,12 @@ export const products = [
   },
   {
     id: 3,
-    mainImg: "../images/sum/product3.jpg",
+    mainImg: "./images/sum/product3.jpg",
     detailImg: [
-      "../images/sum/product3_detail1.jpg",
-      "../images/sum/product3_detail2.jpg",
-      "../images/sum/product3_detail3.jpg",
-      "../images/sum/product3_detail4.jpg",
+      "./images/sum/product3_detail1.jpg",
+      "./images/sum/product3_detail2.jpg",
+      "./images/sum/product3_detail3.jpg",
+      "./images/sum/product3_detail4.jpg",
     ],
     brand: "DAILY MOOD",
     title: "Padding Jumper",
@@ -62,11 +62,11 @@ export const products = [
   },
   {
     id: 4,
-    mainImg: "../images/sum/product4.jpg",
+    mainImg: "./images/sum/product4.jpg",
     detailImg: [
-      "../images/sum/product4_detail1.jpg",
-      "../images/sum/product4_detail2.jpg",
-      "../images/sum/product4_detail3.jpg",
+      "./images/sum/product4_detail1.jpg",
+      "./images/sum/product4_detail2.jpg",
+      "./images/sum/product4_detail3.jpg",
     ],
     brand: "MONO WEAR",
     title: "Basic Turtleneck Knit",
@@ -82,11 +82,11 @@ export const products = [
   },
   {
     id: 5,
-    mainImg: "../images/sum/product5.jpg",
+    mainImg: "./images/sum/product5.jpg",
     detailImg: [
-      "../images/sum/product5_detail1.jpg",
-      "../images/sum/product5_detail2.jpg",
-      "../images/sum/product5_detail3.jpg",
+      "./images/sum/product5_detail1.jpg",
+      "./images/sum/product5_detail2.jpg",
+      "./images/sum/product5_detail3.jpg",
     ],
     brand: "DAILY MOOD",
     title: "V Neck Knit",
@@ -101,7 +101,7 @@ export const products = [
   },
   {
     id: 6,
-    mainImg: "../images/sum/product6.jpg",
+    mainImg: "./images/sum/product6.jpg",
     brand: "DAILY MOOD",
     title: "Classic Cable Knit Turtleneck",
     price: 62,
@@ -111,7 +111,7 @@ export const products = [
   },
   {
     id: 7,
-    mainImg: "../images/sum/product7.jpg",
+    mainImg: "./images/sum/product7.jpg",
     brand: "DAILY MOOD",
     title: "Classic V Neck Cable Knit",
     price: 58,
@@ -121,7 +121,7 @@ export const products = [
   },
   {
     id: 8,
-    mainImg: "../images/sum/product8.jpg",
+    mainImg: "./images/sum/product8.jpg",
     brand: "MONO WEAR",
     title: "Oversized Fit Wool Coat",
     price: 280,
@@ -134,7 +134,7 @@ export const products = [
   },
   {
     id: 9,
-    mainImg: "../images/sum/product9.jpg",
+    mainImg: "./images/sum/product9.jpg",
     brand: "MONO WEAR",
     title: "Striped Collar Knit Long Cardigan",
     price: 180,
@@ -145,7 +145,7 @@ export const products = [
   },
   {
     id: 10,
-    mainImg: "../images/sum/product10.jpg",
+    mainImg: "./images/sum/product10.jpg",
     brand: "MONO WEAR",
     title: "Raglan Sleeve Oversized Coat",
     price: 270,
@@ -155,7 +155,7 @@ export const products = [
   },
   {
     id: 11,
-    mainImg: "../images/sum/product11.jpg",
+    mainImg: "./images/sum/product11.jpg",
     brand: "MONO WEAR",
     title: "Minimal Lettering Sweatshirt",
     price: 110,
@@ -168,7 +168,7 @@ export const products = [
   },
   {
     id: 12,
-    mainImg: "../images/sum/product14.jpg",
+    mainImg: "./images/sum/product14.jpg",
     brand: "MONO WEAR",
     title: "Ethnic Pattern Knit Vest",
     price: 190,
@@ -178,7 +178,7 @@ export const products = [
   },
   {
     id: 13,
-    mainImg: "../images/sum/product12.jpg",
+    mainImg: "./images/sum/product12.jpg",
     brand: "NOIR CARRY",
     title: "Arco Mini Flap Bag",
     price: 180,
@@ -191,7 +191,7 @@ export const products = [
   },
   {
     id: 14,
-    mainImg: "../images/sum/product13.jpg",
+    mainImg: "./images/sum/product13.jpg",
     brand: "NOIR CARRY",
     title: "NOIR Square Bag",
     price: 190,
@@ -201,7 +201,7 @@ export const products = [
   },
   {
     id: 15,
-    mainImg: "../images/sum/product15.jpg",
+    mainImg: "./images/sum/product15.jpg",
     brand: "LUNE JEWEL",
     title: "Thin Gold Pave Ring",
     price: 203,
@@ -210,7 +210,7 @@ export const products = [
   },
   {
     id: 16,
-    mainImg: "../images/sum/product16.jpg",
+    mainImg: "./images/sum/product16.jpg",
     brand: "LUNE JEWEL",
     title: "Blue Square Stone Ring",
     price: 410,
@@ -220,7 +220,7 @@ export const products = [
   },
   {
     id: 17,
-    mainImg: "../images/sum/product17.jpg",
+    mainImg: "./images/sum/product17.jpg",
     brand: "LUNE JEWEL",
     title: "Pink Oval Crystal Ring",
     price: 420,
@@ -230,7 +230,7 @@ export const products = [
   },
   {
     id: 18,
-    mainImg: "../images/sum/product20.jpg",
+    mainImg: "./images/sum/product20.jpg",
     brand: "LUNE JEWEL",
     title: "Layered Gold Ring with Pave Accent",
     price: 400,
