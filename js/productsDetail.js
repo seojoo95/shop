@@ -89,9 +89,6 @@ cartBtn.forEach((el) => {
     const selectedColor = document.querySelector(
       'input[name="color"]:checked',
     )?.value;
-
-    console.log(selectedSize);
-    console.log(selectedColor);
   });
 });
 
