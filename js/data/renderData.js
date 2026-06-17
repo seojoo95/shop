@@ -10,14 +10,13 @@ export function renderProducts(data) {
       (item) =>
         `
     <li class="productCont swiper-slide" data-id="${item.id}"data-cate="${item.category}">
-        <button class="addCartBtn" data-id="${item.id}"><img src="./images/icons/heart.svg" alt="addCartBtn" ></button>
         <a href="./productDetail.html?id=${item.id}&category=${item.category}">
           <div class="imgWrap">
             <img src="${item.mainImg}" alt="${item.title}" />
           </div>
           <div class="productInfoWrap">
               <p class="name">${item.title}</p>
-              <p class="price">$${item.price.toLocaleString()}</p>
+              <p class="price">$${item.initPrice.toLocaleString()}</p>
           </div>
         </a>
     </li>`,
@@ -71,7 +70,6 @@ export function blogContGallery(item) {
 export function productsList(item) {
   return `
   <li class="productCont" data-id=${item.id} data-cate=${item.category}>
-        <button class="addCartBtn" data-id=${item.id}><img src="./images/icons/heart.svg" alt="addCartBtn" ></button>
         <a href="./productDetail.html?id=${item.id}&category=${item.category}">
           <div class="imgWrap">
           <img src=${item.mainImg} alt=${item.title} />
@@ -79,7 +77,7 @@ export function productsList(item) {
           <div class="productInfoWrap">
               <p class="brand">${item.brand}</p>
               <p class="name">${item.title}</p>
-              <p class="price">$${item.price.toLocaleString()}</p>
+              <p class="price">$${item.initPrice.toLocaleString()}</p>
           </div>
         </a>
     </li>
@@ -118,7 +116,7 @@ export function productsDetail(detailData) {
               <div class="productInfoWrap">
                 <p class="brand">${detailData.brand}</p>
                 <p class="name">${detailData.title}</p>
-                <p class="price">$${detailData.price}</p>
+                <p class="price">$${detailData.initPrice}</p>
                 <div class="optionContainer">
                   <div class="optionWrap size">
                     <p class="optionTit">size</p>
@@ -165,9 +163,9 @@ export function productsDetail(detailData) {
                     </ul>
                   </div>
                 </div>
-                <div class="cartBtnWrap web">
-                  <button class="addCartBtn detailAddCart" data-id="${detailData.id}">
-                    add to basket
+                <div class="cartBtnWrap web disabled">
+                  <button class="blackBtn addCartBtn" data-id="${detailData.id}" onclick="location.href='cart.html?id=${detailData.id}&category=${detailData.category}'">
+                    add to cart
                   </button>
                 </div>
               </div>
@@ -175,9 +173,9 @@ export function productsDetail(detailData) {
             </div>
           </section>
           <!-- productInfoSection END -->
-          <div class="cartBtnWrap mo">
-            <button class="addCartBtn detailAddCart" data-id="${detailData.id}">
-              add to basket
+          <div class="cartBtnWrap mo disabled">
+            <button class="blackBtn addCartBtn" data-id="${detailData.id}" onclick="location.href='cart.html?id=${detailData.id}&category=${detailData.category}'">
+              add to cart
             </button>
           </div>
           <section class="productDescriptionSection">
@@ -259,6 +257,98 @@ export function productsDetail(detailData) {
           </section>
           <!-- productDescriptionSection END -->
   `;
+}
+
+//장바구니 데이터
+export function cartProducts(localCartData) {
+  return localCartData
+    .map(
+      (data, idx) =>
+        `<li
+                  class="productCont"
+                  data-id="${data.id}"
+                  data-cate="${data.category}"
+                  ${data.size ? `data-size="${data.size}"` : ""}
+                  ${data.color ? `data-color="${data.color}"` : ""}
+                >
+                  <input
+                    class="productCheck"
+                    type="checkbox"
+                    id="check_${data.id}_${idx + 1}"
+                  />
+                  <div class="imgWrap">
+                    <img src="${data.mainImg}" alt="${data.title}" />
+                  </div>
+                  <div class="productInfoWrap">
+                    <div class="productInfo">
+                      <p class="brand">${data.brand}</p>
+                      <p class="name">${data.title}</p>
+                      <div class="optionWrap">
+                       ${data.size ? `<p class="size">${data.size}</p>` : ""}
+                       ${data.color ? `<p class="color">${data.color}</p>` : ""}
+                      </div>
+                    </div>
+                    <div class="quantityWrap">
+                      <button class="quantityBtn minus">
+                        <img
+                          src="./images/icons/quantity_minus.svg"
+                          alt="quantity_minus"
+                        />
+                      </button>
+                      <input
+                        class="quantity"
+                        type="number"
+                        value="${data.quantity}"
+                        min="1"
+                        max="5"
+                      />
+                      <button class="quantityBtn plus">
+                        <img
+                          src="./images/icons/quantity_plus.svg"
+                          alt="quantity_plus"
+                        />
+                      </button>
+                    </div>
+                    <p class="price">$ <span>${data.totalPrice}</span></p>
+                  </div>
+                  <button class="deleteBtn">
+                    <img src="./images/icons/close.svg" alt="productDeletBtn" />
+                  </button>
+                </li>`,
+    )
+    .join("");
+}
+
+export function orderProducts(orderData) {
+  return orderData
+    .map(
+      (data) =>
+        `<li
+            class="productCont"
+            data-id="${data.id}"
+            data-cate="${data.category}"
+            ${data.size ? `data-size="${data.size}"` : ""}
+            ${data.color ? `data-color="${data.color}"` : ""}
+          >
+
+            <div class="imgWrap">
+              <img src="${data.mainImg}" alt="${data.title}" />
+            </div>
+            <div class="productInfoWrap">
+              <div class="productInfo">
+                <p class="brand">${data.brand}</p>
+                <p class="name">${data.title}</p>
+                <div class="optionWrap">
+                 ${data.size ? `<p class="size">${data.size}</p>` : ""}
+                 ${data.color ? `<p class="color">${data.color}</p>` : ""}
+                </div>
+              </div>
+              <p class="quantity">${data.quantity}</span></p>
+              <p class="price">$ <span>${data.totalPrice}</span></p>
+            </div>
+          </li>`,
+    )
+    .join("");
 }
 // 데이터 연결
 export function renderItem(data, renderFn) {

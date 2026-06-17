@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Fashion</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/cart.css" />
+    <link rel="stylesheet" href="./css/lib/tenorSans.css" />
+    <link rel="stylesheet" href="./css/lib/bodonimoda.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="headerContainer"></header>
+      <main id="main">
+        <div class="cartContainer">
+          <div class="cartCont">
+            <h3 class="sectionTit tit">
+              cart
+              <span class="titIcon">
+                <img src="./images/icons/titUnder.svg" alt="tit under icon" />
+              </span>
+            </h3>
+            <div class="productContainer">
+              <div class="productsHeader">
+                <div class="allCheck">
+                  <input type="checkbox" id="allCheck" class="allCheck" />
+                  <label for="allCheck">all</label>
+                </div>
+                <button class="allDelete">all delete</button>
+              </div>
+              <ul class="productsWrap"></ul>
+            </div>
+          </div>
+          <div class="orderWrap">
+            <div class="totalWrap quantity">
+              <p>quantity</p>
+              <p class="quantity">0</p>
+            </div>
+            <div class="totalWrap price">
+              <p>total</p>
+              <p class="price">$<span>0</span></p>
+            </div>
+            <a
+              href="./order.html"
+              class="blackBtn centerBtn hidden"
+              data-id="${detailData.id}"
+            >
+              order
+            </a>
+          </div>
+        </div>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+    <script type="module" src="./js/include.js"></script>
+    <script type="module" src="./js/data/renderData.js"></script>
+    <script type="module" src="./js/cart.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>

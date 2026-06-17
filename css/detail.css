@@ -108,7 +108,6 @@
 .optionWrap.color .optionList input[type="radio"]:checked + .radioBox {
   border-color: var(--black);
 }
-
 .cartBtnWrap.mo {
   position: fixed;
   bottom: 0;
@@ -118,49 +117,6 @@
 }
 .cartBtnWrap.web {
   display: none;
-}
-.addCartBtn.detailAddCart {
-  position: static;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  padding: 18px 16px;
-  margin-top: 40px;
-  background: var(--black);
-  color: #fff;
-  text-align: left;
-  text-transform: uppercase;
-  transition: 300ms;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-}
-.productDetailContainer .addCartBtn.detailAddCart:before {
-  content: "";
-  display: block;
-  width: 20px;
-  height: 20px;
-  background: url("../images/icons/plus_w.svg") no-repeat center / cover;
-}
-.productDetailContainer .addCartBtn.detailAddCart:after {
-  content: "";
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-left: auto;
-  background: url("../images/icons/heart_w.svg") no-repeat center / cover;
-}
-.productDetailContainer .addCartBtn.detailAddCart:hover {
-  background: #fff;
-  color: var(--black);
-  border-top: 1px solid var(--black);
-  border-bottom: 1px solid var(--black);
-}
-.productDetailContainer .addCartBtn.detailAddCart:hover:before {
-  background-image: url("../images/icons/plus.svg");
-}
-.productDetailContainer .addCartBtn.detailAddCart:hover:after {
-  background-image: url("../images/icons/heart_color.svg");
 }
 .productDescriptionSection {
   padding: 0 16px;
@@ -234,6 +190,11 @@
 .productDetailContainer .recommendProducts {
   padding: 80px 16px 50px;
 }
+.cartBtnWrap.disabled .addCartBtn {
+  background: var(--gray4);
+  cursor: none;
+  pointer-events: none;
+}
 
 /* 반응형 - tablet */
 @media screen and (min-width: 659px) {
@@ -274,7 +235,7 @@
     display: block;
     max-width: 300px;
   }
-  .cartBtnWrap.web .addCartBtn.detailAddCart {
+  .cartBtnWrap.web .addCartBtn {
     padding: 12px 16px;
   }
   .productDescriptionSection {

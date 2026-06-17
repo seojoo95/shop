@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Open Fashion</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/form.css" />
+    <link rel="stylesheet" href="./css/order.css" />
+    <link rel="stylesheet" href="./css/lib/tenorSans.css" />
+    <link rel="stylesheet" href="./css/lib/bodonimoda.css" />
+    <script src="./js/lib/postcode.v2.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="headerContainer"></header>
+      <main id="main">
+        <div class="addressSectionWrap">
+          <div class="sectionWrap">
+            <section class="addressContainer">
+              <h3 class="sectionMainTit tit">
+                checkout
+                <span class="titIcon">
+                  <img src="./images/icons/titUnder.svg" alt="tit under icon" />
+                </span>
+              </h3>
+              <div class="flexInput">
+                <input type="text" id="firstName" placeholder="First name" />
+                <input type="text" id="lastName" placeholder="Last name" />
+              </div>
+              <div class="addressInput">
+                <div class="searchInput">
+                  <input type="text" id="address" placeholder="Address" />
+                  <button class="searchBtn">Search</button>
+                </div>
+                <input type="text" id="state" placeholder="State" />
+                <div class="flexInput">
+                  <input
+                    type="text"
+                    id="OtherAddress"
+                    placeholder="Others address"
+                  />
+                  <input type="text" id="zoneCode" placeholder="Zone code" />
+                </div>
+              </div>
+              <input type="tel" id="tel" placeholder="Phone Number" max="11" />
+            </section>
+            <section class="productinfonContainer">
+              <div class="sectionSubTit">order item</div>
+              <ul class="productsWrap"></ul>
+            </section>
+            <section class="paySelect">
+              <div class="sectionSubTit">payment method</div>
+              <div class="radioWrap">
+                <label for="card">
+                  <input type="radio" name="pay" id="card" />
+                  <span class="radioBox"></span>
+                  Credit Card
+                </label>
+              </div>
+              <!-- radioWrap END -->
+              <div class="radioWrap">
+                <label for="bank">
+                  <input type="radio" name="pay" id="bank" />
+                  <span class="radioBox"></span>
+                  Bank Transfer
+                </label>
+              </div>
+              <!-- radioWrap END -->
+            </section>
+          </div>
+          <!-- sectionWrap END -->
+          <div class="payBtnWrap">
+            <div class="totalWrap quantity">
+              <p>quantity</p>
+              <p class="quantity">0</p>
+            </div>
+            <div class="totalWrap price">
+              <p>total</p>
+              <p class="price">$<span>0</span></p>
+            </div>
+            <button class="blackBtn centerBtn">checkout</button>
+          </div>
+          <!-- payBtnWrap END -->
+        </div>
+      </main>
+      <footer id="footer"></footer>
+    </div>
+    <div class="popWrap">
+      <div class="popCont">
+        <div class="popTit">paying</div>
+        <div class="aniWrap">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <p class="popText">Please wait while we process your payment.</p>
+      </div>
+    </div>
+    <script type="module" src="./js/include.js"></script>
+    <script type="module" src="./js/data/renderData.js"></script>
+    <script type="module" src="./js/order.js"></script>
+    <script src="./js/common.js"></script>
+  </body>
+</html>

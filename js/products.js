@@ -52,11 +52,11 @@ function productsFilterHandle(data) {
     let result = [...baseData];
 
     if (value === "high") {
-      result.sort((a, b) => b.price - a.price);
+      result.sort((a, b) => b.initprice - a.initprice);
     }
 
     if (value === "low") {
-      result.sort((a, b) => a.price - b.price);
+      result.sort((a, b) => a.initprice - b.initprice);
     }
 
     if (value === "new") {

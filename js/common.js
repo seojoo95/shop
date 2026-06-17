@@ -37,6 +37,28 @@ function gnbHandle() {
         });
       }
     });
+    const loginBtn = document.querySelector(".loginBtn");
+    const logoutBtn = document.querySelector(".logoutBtn");
+
+    function loginState() {
+      const loginState = localStorage.getItem("loginUser");
+
+      if (loginState) {
+        loginBtn.style.display = "none";
+        logoutBtn.style.display = "block";
+
+        console.log(logoutBtn);
+
+        logoutBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          localStorage.removeItem("loginUser");
+          loginBtn.style.display = "block";
+          logoutBtn.style.display = "none";
+          location.href = "./index.html";
+        });
+      }
+    }
+    loginState();
   });
 }
 

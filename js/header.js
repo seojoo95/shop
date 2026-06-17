@@ -15,12 +15,26 @@ export function headerContents() {
             <button class="searchBtn">
               <img src="./images/icons/search_black.svg" alt="search" />
             </button>
-            <button class="shoppingBagBtn">
+            <a href="./cart.html" class="shoppingBagBtn">
               <img
                 src="./images/icons/shoppingbag_black.svg"
                 alt="shoppingbag"
               />
-            </button>
+            </a>
+            <div class="loginWrap">
+            <a href="./login.html" class="loginBtn">
+              <img
+                src="./images/icons/logout.svg"
+                alt="logout"
+              />
+            </a>
+            <a href=""javascript:;" class="logoutBtn">
+              <img
+                src="./images/icons/login.svg"
+                alt="login"
+              />
+            </a>
+            </div>
           </div>
         </div>
         <div class="dim" aria-hidden="true"></div>

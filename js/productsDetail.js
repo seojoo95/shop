@@ -5,13 +5,30 @@ import { getParam } from "./data/getParam.js";
 const idParam = Number(getParam("id"));
 const categoryParam = getParam("category");
 
-//상품 상세페이지
-function productDetailHandle() {
-  const detailData = products.find((data) => data.id === idParam);
+export const detailData = products.find((data) => data.id === idParam);
 
-  const productDetailContainer = document.querySelector(
-    ".productDetailContainer",
-  );
+//size, color 선택 데이터
+export function cartData(detailData) {
+  const selectedSize = document.querySelector(
+    'input[name="size"]:checked',
+  )?.value;
+
+  const selectedColor = document.querySelector(
+    'input[name="color"]:checked',
+  )?.value;
+
+  return {
+    ...detailData,
+    size: selectedSize,
+    color: selectedColor,
+  };
+}
+
+//상품 상세페이지
+const productDetailContainer = document.querySelector(
+  ".productDetailContainer",
+);
+function productDetailHandle() {
   productDetailContainer.insertAdjacentHTML(
     "afterbegin",
     productsDetail(detailData),
@@ -59,7 +76,9 @@ function productDetailHandle() {
     });
   });
 }
-productDetailHandle();
+if (productDetailContainer) {
+  productDetailHandle();
+}
 
 //메인 이미지 포커스
 function imgFocushandle() {
@@ -78,24 +97,34 @@ function imgFocushandle() {
 }
 imgFocushandle();
 
-//장바구니 버튼 클릭
-const cartBtn = document.querySelectorAll(".cartBtnWrap");
-cartBtn.forEach((el) => {
-  el.addEventListener("click", () => {
-    const selectedSize = document.querySelector(
-      'input[name="size"]:checked',
-    )?.value;
+//장바구니 버튼 활설&비활성
+const addCartBtn = document.querySelectorAll(".cartBtnWrap");
+const sizeRadio = document.querySelectorAll('input[name="size"]');
+const colorRadio = document.querySelectorAll('input[name="color"]');
 
-    const selectedColor = document.querySelector(
-      'input[name="color"]:checked',
-    )?.value;
-  });
+function addCartBtnHandle() {
+  const isSizeValid =
+    sizeRadio.length === 0 ||
+    document.querySelector('input[name="size"]:checked');
+  const isColorValid =
+    colorRadio.length === 0 ||
+    document.querySelector('input[name="color"]:checked');
+
+  // 2. 둘 다 만족하면 버튼 활성화!
+  if (isSizeValid && isColorValid) {
+    addCartBtn.forEach((el) => el.classList.remove("disabled"));
+  } else {
+    addCartBtn.forEach((el) => el.classList.add("disabled"));
+  }
+}
+
+[...sizeRadio, ...colorRadio].forEach((el) => {
+  el.addEventListener("change", addCartBtnHandle);
 });
 
 //추천 상품
+const recommend = document.querySelector(".recommendProducts .productsWrap");
 function recommendProducts() {
-  const recommend = document.querySelector(".recommendProducts .productsWrap");
-
   const recommendData = [...products]
     .filter((item) => item.id !== idParam && item.category === categoryParam)
     .sort(() => Math.random() - 0.5)
@@ -103,4 +132,6 @@ function recommendProducts() {
 
   recommend.innerHTML = renderItem(recommendData, productsList);
 }
-recommendProducts();
+if (recommend) {
+  recommendProducts();
+}
