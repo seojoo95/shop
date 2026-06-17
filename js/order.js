@@ -20,7 +20,6 @@ if (orderData.length === 0) {
 } else {
   addressProductsWrap.innerHTML = orderProducts(orderData);
 }
-// addressProductsWrap.innerHTML = orderProducts(orderData);
 
 //전체 수량, 가격 계산
 function orderTotalResult() {
@@ -100,13 +99,16 @@ function addressSearch() {
   orderAddress.pay = payVal.id;
 
   localStorage.setItem("orderAddress", JSON.stringify(orderAddress));
+  return true;
 }
 checkoutBtn.addEventListener("click", () => {
   const payPop = document.querySelector(".popWrap");
 
+  if (!addressSearch()) {
+    return;
+  }
   payPop.classList.add("show");
 
-  addressSearch();
   setTimeout(() => {
     payPop.classList.remove("show");
     window.location = "./orderList.html";
@@ -116,5 +118,3 @@ checkoutBtn.addEventListener("click", () => {
 if (addressProductsWrap) {
   orderTotalResult();
 }
-
-setInterval;

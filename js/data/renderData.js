@@ -209,7 +209,7 @@ export function productsDetail(detailData) {
                     <span class="careTit">Free Flat Rate Shipping</span>
                     <p class="careText">
                       Estimated to be delivered on <br />
-                      09/11/2021 - 12/11/2021.
+                      01/01/2026 - 31/12/2026.
                     </p>
                   </div>
                 </li>
