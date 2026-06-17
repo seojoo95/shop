@@ -1,5 +1,5 @@
 import { products } from "./data/data.js";
-import { productsList, renderItem, productsDetail } from "./data/renderData.js";
+import { productsList, renderItem } from "./data/renderData.js";
 import { getParam } from "./data/getParam.js";
 
 const productsContainer = document.querySelector(
@@ -9,11 +9,22 @@ const productsContainer = document.querySelector(
 const categoryParam = getParam("category");
 const tagParam = getParam("tag");
 
+const productsNum = document.querySelector(
+  ".productFilterHead .totalNum > span",
+);
+//전체 상품 렌더
+function allProducts() {
+  if (categoryParam === "all") {
+    productsContainer.innerHTML = renderItem(products, productsList);
+
+    productsFilterHandle(products);
+
+    productsNum.textContent = products.length;
+  }
+}
+
 //gnb 상품 필터
 function gnbProductsFilter() {
-  const productsNum = document.querySelector(
-    ".productFilterHead .totalNum > span",
-  );
   if (categoryParam && tagParam) {
     //둘 다 있으면 데이터의 category와도 같고 seoson도 같은 애를 찾아라
 
@@ -39,6 +50,7 @@ function gnbProductsFilter() {
 
 if (productsContainer) {
   gnbProductsFilter();
+  allProducts();
 }
 
 //상품 필터
@@ -52,11 +64,11 @@ function productsFilterHandle(data) {
     let result = [...baseData];
 
     if (value === "high") {
-      result.sort((a, b) => b.initprice - a.initprice);
+      result.sort((a, b) => b.initPrice - a.initPrice);
     }
 
     if (value === "low") {
-      result.sort((a, b) => a.initprice - b.initprice);
+      result.sort((a, b) => a.initPrice - b.initPrice);
     }
 
     if (value === "new") {

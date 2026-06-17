@@ -57,6 +57,7 @@ main {
   bottom: 40px;
   transform: translateX(-50%);
   height: 40px;
+  line-height: 40px;
   white-space: nowrap;
   padding: 0 30px;
   background: rgba(0, 0, 0, 0.4);
