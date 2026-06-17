@@ -319,6 +319,7 @@ export function cartProducts(localCartData) {
     .join("");
 }
 
+//주문상품 데이터
 export function orderProducts(orderData) {
   return orderData
     .map(

@@ -41,12 +41,12 @@
   font-size: 20px;
   text-transform: capitalize;
 }
-.addressSectionWrap .productsWrap {
+.orderProducts {
   display: block;
   max-width: none;
   margin-top: 0;
 }
-.addressSectionWrap .productCont {
+.orderProducts .productCont {
   position: relative;
   display: flex;
   align-items: center;
@@ -54,9 +54,8 @@
   max-width: none;
   margin-bottom: 30px;
 }
-.addressSectionWrap .productInfoWrap .quantity {
+.orderProducts .productInfoWrap .quantity {
   margin: 12px 0;
-  font-size: var(--fsM);
 }
 .addressSectionWrap .radioWrap {
   margin-bottom: 18px;
@@ -156,11 +155,59 @@
 .popCont .popText {
   padding: 40px 0 50px;
 }
+
+/* orderList */
+#main .section.orderList {
+  max-width: 700px;
+}
+.orderList .orderInfoWrap {
+  margin-top: 50px;
+  text-align: left;
+}
+.orderList .orderInfoWrap .name {
+  font-size: var(--fsM);
+  text-transform: capitalize;
+  color: var(--gray1);
+}
+.orderList .orderInfoWrap p {
+  margin-bottom: 20px;
+}
+.orderList .orderInfoWrap p.address:first-of-type {
+  margin-bottom: 8px;
+}
+.orderList .orderInfoWrap .pay {
+  text-transform: capitalize;
+}
+.orderList .orderProducts {
+  padding: 30px 0;
+}
+.orderList .orderTotalWrap {
+  padding-bottom: 80px;
+  text-align: left;
+  text-transform: uppercase;
+}
+.orderList .orderTotalWrap > p {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.orderList .orderTotalWrap > p:last-of-type {
+  margin-bottom: 0;
+}
+.orderList .orderTotalWrap > p > span {
+  display: block;
+  font-size: var(--fsM);
+}
+.orderList .orderTotalWrap > p:last-of-type > span {
+  color: var(--orange2);
+}
+
 @media screen and (min-width: 1023px) {
-  .addressSectionWrap .productInfoWrap {
+  .orderProducts .productInfoWrap {
     justify-content: space-between;
   }
-  .addressSectionWrap .productInfoWrap .price {
+  .orderProducts .productInfoWrap .price {
     margin-top: 0;
     text-align: right;
   }
