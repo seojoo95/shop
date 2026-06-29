@@ -258,6 +258,20 @@
   font-size: var(--fsL);
   color: var(--orange2);
 }
+.productsWrap .productCont,
+.productCont .imgWrap,
+.productCont .imgWrap > img,
+.productCont .productInfoWrap {
+  /* iOS 사파리에서 링크나 이미지를 길게 누를 때 나오는 컨텍스트 메뉴(팝업) 차단 */
+  -webkit-touch-callout: none;
+
+  /* 안드로이드 크롬 등에서 텍스트나 요소가 길게 눌려 선택되는 것 방지 */
+  -webkit-user-select: none;
+  user-select: none;
+
+  /* 이미지 드래그 방지 */
+  -webkit-user-drag: none;
+}
 /* tab menu */
 .tabMenuWrap {
   display: flex;
