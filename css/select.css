@@ -55,8 +55,8 @@
 .choices__list[aria-expanded] .choices__item--selectable.is-selected {
   color: var(--gray2);
 }
-.choices.is-open ~ .productsWrap,
-.choices.is-open ~ * .productCont {
+.is-open ~ .productsWrap,
+.is-open ~ * .productCont {
   /* 드롭다운이 열린 동안에는 아래 상품 영역의 모든 터치/클릭을 유령처럼 무시함 */
   pointer-events: none !important;
 }
