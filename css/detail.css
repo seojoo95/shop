@@ -35,18 +35,18 @@
   background: var(--orange2);
 }
 .productInfoSection .productInfoWrap {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 .productInfoSection .productInfoWrap .brand {
-  font-size: 20px;
+  font-size: 18px;
 }
 .productInfoSection .productInfoWrap .name {
   margin-top: 14px;
-  font-size: 16px;
+  font-size: 14px;
 }
 .productInfoSection .productInfoWrap .price {
   margin-top: 12px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .productInfoSection .optionContainer {
   display: flex;
@@ -139,14 +139,14 @@
   margin-bottom: 20px;
 }
 .productDescriptionSection .careCont .titIcon {
-  width: 24px;
+  width: 22px;
   margin-top: -2px;
 }
 .productDescriptionSection .careCont .titIcon > img {
   width: 100%;
 }
 .productDescriptionSection .careCont:not(:first-of-type) .titIcon > img {
-  height: 21px;
+  height: 20px;
 }
 .productDescriptionSection .careTextWrap {
   width: calc(100% - 22px);
@@ -160,7 +160,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 16px;
+  font-size: 14px;
   cursor: pointer;
 }
 .productDescriptionSection .careTextWrap .careTit:after {
@@ -188,7 +188,7 @@
 }
 
 .productDetailContainer .recommendProducts {
-  padding: 80px 16px 50px;
+  padding: 60px 16px 50px;
 }
 .cartBtnWrap.disabled .addCartBtn {
   background: var(--gray4);

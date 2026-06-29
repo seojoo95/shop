@@ -36,9 +36,9 @@ export function footerContents() {
             </span>
           </address>
           <ul class="footerMenuWrap">
-            <li class="footerMenu"><a href="#">about</a></li>
-            <li class="footerMenu"><a href="#">contact</a></li>
-            <li class="footerMenu"><a href="./blogMain.html">blog</a></li>
+            <li class="footerMenu"><a href="../about.html">about</a></li>
+            <li class="footerMenu"><a href="../contact.html">contact</a></li>
+            <li class="footerMenu"><a href="../blogMain.html">blog</a></li>
           </ul>
         </div>
         <div class="copyright">Copyright&copy; OpenUI All Rights Reserved.</div>`;

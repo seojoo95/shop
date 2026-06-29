@@ -150,17 +150,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 .headerWrap .logo {
   position: absolute;
   left: 50%;
   transform: translateX(-55%);
 }
+.headerWrap .logo img {
+  width: 95%;
+}
 .headerWrap .headerOption {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 18px;
 }
 .headerOption .loginWrap {
   width: 25px;
@@ -285,6 +288,46 @@
   height: 6px;
   background: var(--orange2);
   transform: rotate(45deg) translateX(-50%);
+}
+
+/* contact & about */
+#main .section.contact,
+#main .section.about {
+  max-width: 580px;
+  margin: 0 auto;
+}
+.contact .sectionCont {
+  margin-top: 80px;
+}
+.contact .sectionCont:first-of-type {
+  margin-top: 50px;
+}
+.contact .sectionCont img {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+}
+.contact .sectionCont .textWrap,
+.about .sectionCont .textWrap {
+  padding: 20px 0 25px;
+  line-height: 1.6;
+  text-align: left;
+}
+.contact .sectionCont .blackBtn.centerBtn {
+  width: fit-content;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+#main.about {
+  min-height: auto;
+}
+.about .sectionCont {
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.about .sectionCont img {
+  width: 100%;
 }
 /* sns */
 .snsWrap {

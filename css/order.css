@@ -155,7 +155,8 @@
   }
 }
 .popCont .popText {
-  padding: 40px 0 50px;
+  padding: 40px 16px 50px;
+  line-height: 1.4;
 }
 
 /* orderList */

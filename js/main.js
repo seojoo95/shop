@@ -90,4 +90,6 @@ document.addEventListener("includeLoaded", () => {
     foryouProductsList.innerHTML = renderProducts(random);
   }
   foryouProducts();
+
+  //상품 검색
 });
